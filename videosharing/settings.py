@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "videoapp.apps.VideoappConfig",
-    "django_cleanup",
+    "django_cleanup.apps.CleanupConfig",
 ]
 
 MIDDLEWARE = [
