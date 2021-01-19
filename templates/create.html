@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+    <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="作成する">
+        <button type="button" style="background-color: mediumpurple; border-radius: 20px;"><a href="{% url 'list' %}" class="btn btn-primary">一覧へ戻る</a></button>
+    </form>
+{% endblock content %}

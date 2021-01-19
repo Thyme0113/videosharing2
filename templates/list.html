@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% endblock header %}
+
+
+{% block content %}
+<div class="container" style="margin-top: 30px;">
+{% for item in object_list %}
+<div class="card" style="
+  float: left;
+  width: 230px;
+  height: 220px;
+  margin-right: 0px;
+  opacity: 0.8;
+  background-image: url('../media/img/videoicon.png');
+  background-repeat: no-repeat;">
+    <div class="card-body"  style="
+    text-align: center;
+    margin-top: 50px;">
+      <h5 class="card-title" style="
+      margin: 0;
+      font-size: 30px;
+      font-family: fantasy;">{{ item.title }}</h5>
+      <h6 class="card-title" style="font-family: fantasy;">{{ item.postdate }}</h6>
+      <button type="button" style="background-color: dodgerblue;"><a href="{% url 'detail' item.pk %} " class="btn btn-primary" style="text-decoration: none;">見る</a></button>
+      <button type="button" style="background-color: firebrick;"><a href="{% url 'delete' item.pk %}" class="btn btn-primary" style="text-decoration: none;">削除</a></button>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% endblock content %}

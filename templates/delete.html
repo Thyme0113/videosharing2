@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<div style="position: absolute; top: 50%;
+left: 35%;">
+<form action="" method="POST">{% csrf_token %}
+    <input type="submit" value="削除します。">
+    <button type="button" style="background-color: mediumpurple; border-radius: 20px;"><a href="{% url 'list' %}" class="btn btn-primary">一覧へ戻る</a></button>
+</form>
+</div>
+{% endblock content %}
